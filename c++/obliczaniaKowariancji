@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int n;
+    double sumax=0.0, sumay=0.0, sumaz=0.0;
+    cout<<"Ile liczb: "; cin>>n;
+    double*X=new double[n];
+    double*Y=new double[n];
+    for(int i=0; i<n; i++){
+        cout<<"Wpisuj punkt "<<i+1<<" dla ---->\[x\]<----\[y\]:  "; cin>>X[i];
+        cout<<"Wpisuj punkt "<<i+1<<" dla \[x\]---->\[y\]<----:  "; cin>>Y[i];
+    }
+    for(int i=0; i<n; i++){
+        sumax+=X[i];
+        sumay+=Y[i];
+        sumaz+=X[i]*Y[i];
+    }
+    cout<<"Z= "<<((sumaz)/n)-(sumax/n*sumay/n);
+    delete[] X;
+    delete[] Y;
+    return 0;
+}
