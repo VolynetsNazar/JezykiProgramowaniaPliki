@@ -20,6 +20,7 @@ int main()
     suma_y = suma_y + Y[i];
     }
     cout<<"Srodek ciezkosci dla X: "<<suma_x/n<<" dla Y: "<<suma_y / n;
-
+    delete[] X;
+    delete[] Y;
     return 0;
 }
