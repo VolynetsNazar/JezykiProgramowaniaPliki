@@ -8,8 +8,7 @@ int main()
     cout<<"Ile liczb chcesz wpisac do pliku? "; cin>>n;
     ofstream pisanie("plik.txt");
     for(int i=1; i<=n; i++){
-            int b; cout<<"Wpisuj "<<i<<" liczbe: "; cin>>b;
-            pisanie<<b<<" ";}
+        pisanie<<i<<" ";}
     pisanie.close();
 
 
